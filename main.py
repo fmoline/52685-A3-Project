@@ -1,0 +1,259 @@
+import os
+import sys
+import time
+
+a = 0
+b = 0
+c = 0
+d = 0
+e = 0
+
+def typingeffect(chat):
+  for character in chat:
+    sys.stdout.write(character)
+    sys.stdout.flush()
+    time.sleep(0.05)
+    #time here is used for the speed that the text will be printed.
+
+def clearscreen():
+  os.system("clear")
+
+typingeffect("Welcome to The New Book Quiz!\n")
+time.sleep(1)
+typingeffect("Answer the questions and I'll tell you which one of my favourite books you should read!\n")
+#\n after puts the text on a new line
+typingeffect("To answer, type the letter in lowercase and press enter.")
+print("\n")
+
+time.sleep(1)
+#Question 1:
+print("Q1: Which genre do you like the most?")
+print("a: Dystopian")
+print("b: Psychological Thriller")
+print("c: Romance")
+print("d: Fantasy")
+print("e: Mystery")
+
+while True:
+  answer = input("Answer: ")
+  if answer == 'a':
+    a += 1
+    break
+  elif answer == 'b':
+    b += 1
+    break
+  elif answer == 'c':
+    c += 1
+    break
+  elif answer == 'd':
+    d += 1
+    break
+  elif answer == 'e':
+    e += 1
+    break
+  else:
+    print(input("That's not an answer! Try again: "))
+    break
+
+print("\n")
+#Question 2
+print("Q2: Which bird is your favouite...")
+print("a: Pheonix")
+print("b: Canary")
+print("c: Dove")
+print("d: Peacock")
+print("e: Kookaburra")
+
+while True:
+  answer = input("Answer: ")
+  if answer == "a":
+    a += 1
+    break
+  elif answer == 'b':
+    b += 1
+    break
+  elif answer == 'c':
+    c += 1
+    break
+  elif answer == 'd':
+    d += 1
+    break
+  elif answer == 'e':
+    e += 1
+    break
+  else:
+    print(input("That's not an answer! Try again: "))
+    break
+
+print("\n")
+#Question 3
+print("Q3: Which superpower would you most like to have?")
+print("a: Invisibility")
+print("b: Mind-reading")
+print("c: Time travel")
+print("d: Element control")
+print("e: Teleportation")
+
+while True:
+  answer = input("Answer: ")
+  if answer == "a":
+    a += 1
+    break
+  elif answer == 'b':
+    b += 1
+    break
+  elif answer == 'c':
+    c += 1
+    break
+  elif answer == 'd':
+    d += 1
+    break
+  elif answer == 'e':
+    e += 1
+    break
+  else:
+    print(input("That's not an answer! Try again: "))
+    break
+
+print("\n")
+#Question 4
+print("Q4: What kind of kid were you?")
+print("a: The Bookworm")
+print("b: The Scooby Doo Kid (loved solving mysteries)")
+print("c: The \"Lets play family!\" Kid")
+print("d: The 'Horse Girl' Kid (Don't be embarrassed - I was one!")
+print("e: The Sporty Kid")
+
+while True:
+  answer = input("Answer: ")
+  if answer == "a":
+    a += 1
+    break
+  elif answer == 'b':
+    b += 1
+    break
+  elif answer == 'c':
+    c += 1
+    break
+  elif answer == 'd':
+    d += 1
+    break
+  elif answer == 'e':
+    e += 1
+    break
+  else:
+    print(input("That's not an answer! Try again: "))
+    break
+
+print("\n")
+#Question 5
+print("Q5: Who is your favourite 'New Girl' character?")
+print("a: Schmidt")
+print("b: Nick Miller")
+print("c: Cece Parikh")
+print("d: Jessica Day")
+print("e: I don't know what New Girl is...?")
+
+while True:
+  answer = input("Answer: ")
+  if answer == "a":
+    a += 1
+    break
+  elif answer == 'b':
+    b += 1
+    break
+  elif answer == 'c':
+    c += 1
+    break
+  elif answer == 'd':
+    d += 1
+    break
+  elif answer == 'e':
+    print("\n")
+    typingeffect("You don't know 'New Girl'?! It's only the greatest show on earth.\n")
+    typingeffect("You're not allowed to continue until you've seen the show.\n")
+    typingeffect("Goodbye!")
+    time.sleep(3)
+    clearscreen()
+    sys.exit()
+    break
+  else:
+    print(input("That's not an answer! Try again: "))
+    break
+
+#Questions are still printing after the Goodbye message, and question 6 printe forever
+while True:
+  print("\n")
+  print("Q6: Which Barbie character do you relate to most?")
+  print("a: Ken")
+  print("b: Weird Barbie")
+  print("c: Barbie")
+  print("d: Allan")
+  print("e: Mermaid Barbie")
+  break
+
+while True:
+  answer = input("Answer: ")
+  if answer == "a":
+    a += 1
+    break
+  elif answer == 'b':
+    b += 1
+    break
+  elif answer == 'c':
+    c += 1
+    break
+  elif answer == 'd':
+    d += 1
+    break
+  elif answer == 'e':
+    e += 1
+    break
+  else:
+    print(input("That's not an answer! Try again: "))
+    break
+
+#this isn't working now - after the while false being put in
+while True:
+  print("\n")
+  typingeffect("Anaylsing answers...\n")
+  typingeffect("Choosing best book match...")
+  typingeffect("Aha! I know the one...")
+  time.sleep(1)
+  clearscreen()
+  break
+
+  #outcomes
+  print("\n")
+  while True:
+    if a > b and a > c and a > d and a > e:
+      typingeffect("Your new book: Farenheit 451 by Ray Bradbury\n")
+      time.sleep(1)
+      print("Synopsis: ")
+      break
+    if b > a and b > c and b > d and b > e:
+      typingeffect("Your new book: The Silent Patient by Alex Michaelides")
+      time.sleep(1)
+      print("...")
+      break
+    if c > a and c > b and c > d and c > e:
+      typingeffect("Your new book: Everything I Know About Love by Dolly Alderton")
+      time.sleep(1)
+      print("...")
+      break
+    if d > a and d > b and d > c and d > e:
+      typingeffect("Your new book: The Red Queen by Victoria Aveyard")
+      time.sleep(1)
+      print("...")
+      break
+    if e > a and e > b and e > c and e > d:
+      typingeffect("Your new book: The Dry by Jane Harper")
+      time.sleep(1)
+      print("...")
+      break
+
+#def clear_restartQ():
+# os.system(clear)
+#  print("Would you like to restart the quiz?")
+# this is not working, want to ask if they'd like to restart and try for a new book, and then take them back to first question.
+#needs to be at the top - making definition for function use
